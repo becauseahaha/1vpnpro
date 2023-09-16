@@ -599,6 +599,7 @@ body {
   overflow: hidden;
   position: relative;
   max-height: 240px;
+  aspect-ratio: 52/24;
 }
 .pros-card__image {
   top: 50%;
@@ -883,6 +884,7 @@ body {
   }
   .pros-card__image-box {
     height: 240px;
+    aspect-ratio: unset;
   }
   .pros-card__image {
     position: absolute;
