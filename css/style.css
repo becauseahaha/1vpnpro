@@ -28,7 +28,7 @@ body {
   font-family: Rubik, sans-serif;
   font-size: 1.25rem;
   color: var(--white);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .color-green {
