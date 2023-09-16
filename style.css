@@ -1,0 +1,40 @@
+html {
+  color-scheme: dark;
+  --green: #219B68;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #17181C;
+  font-family: Rubik, sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.layout {
+  margin: 0 auto;
+  max-width: 1269px;
+}
+
+.header {
+  line-height: 43px;
+  margin: 24px 0;
+  display: flex;
+}
+
+.logo {
+  font-size: 1.75rem;
+  color: var(--green);
+}
+.logo--domain {
+  color: var(--white);
+}
+
+/*# sourceMappingURL=style.css.map */
