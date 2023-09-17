@@ -327,6 +327,9 @@ body {
 .icon_star {
   background-image: url(./../images/icon-star.svg);
 }
+.icon_close {
+  background-image: url(./../images/icon-close.svg);
+}
 
 .logo {
   font-size: 1.75rem;
@@ -496,6 +499,9 @@ body {
   max-height: 900px;
 }
 .reviews__image {
+  width: 100%;
+  max-width: 404px;
+  height: auto;
   border-radius: 16px;
 }
 
@@ -651,13 +657,117 @@ body {
   color: var(--white);
 }
 
+.popup.is-shown {
+  display: flex;
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(23, 24, 28, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.popup__window {
+  position: relative;
+  display: flex;
+  padding: 60px 80px 60px 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  border-radius: 20px;
+  border: 2px solid var(--green-darker);
+  background: var(--bg);
+  gap: 40px;
+}
+.popup__close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.popup__close-icon {
+  width: 100%;
+  height: 100%;
+  fill: #7C7D81;
+  transition: fill 0.1s;
+}
+.popup__close-icon:hover {
+  fill: var(--white);
+}
+.popup__image_fail {
+  width: 368px;
+  height: 238px;
+}
+.popup__image_success {
+  width: 400px;
+  height: 386px;
+}
+.popup__content {
+  max-width: 430px;
+}
+.popup__title {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 40px;
+}
+.popup__text {
+  text-align: center;
+  line-height: 150%;
+  margin-bottom: 28px;
+}
+
+.popup_success .popup__window {
+  border-color: var(--green-darker);
+}
+.popup_success .popup__title {
+  color: var(--green);
+}
+.popup_success .popup__image_fail {
+  display: none;
+}
+
+.popup_fail .popup__window {
+  border-color: var(--red-darker);
+}
+.popup_fail .popup__title {
+  color: var(--red-darker);
+}
+.popup_fail .popup__image_success {
+  display: none;
+}
+
 @media (max-width: 1024px) {
+  .popup__window {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 60px 80px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .popup__image_success {
+    width: 318px;
+    height: 306px;
+  }
+  .popup__image_fail {
+    width: 400px;
+    height: 242px;
+  }
   .bg_mascot-header {
     top: 430px;
     right: 50px;
   }
   .bg_mascot-header.js-parallax {
-    top: 550px;
+    top: 340px;
   }
   .bg_stars-small-header {
     top: 220px;
@@ -669,34 +779,46 @@ body {
   .bg_clouds-header {
     top: 220px;
     right: -250px;
-    transform: scale(1.1);
+    scale: 1.1;
   }
   .bg_clouds-middle, .bg_stars-middle {
     left: 0;
   }
   .bg_mascot-footer {
     left: 50%;
-    transform: translate(-50%, 0);
+    translate: -50% 0;
+  }
+  .bg_mascot-footer.js-parallax {
+    top: 500px;
   }
   .bg_planets {
     top: 89px;
     left: 50%;
-    transform: translate(-55%, 0);
+    translate: -55% 0;
+  }
+  .bg_planets.js-parallax {
+    top: 240px;
   }
   .bg_stars-footer {
     top: 10px;
     left: 50%;
-    transform: translate(-50%, 0);
+    translate: -50% 0;
+  }
+  .bg_stars-footer.js-parallax {
+    top: 110px;
   }
   .bg_stars-small-footer {
     top: 20px;
     left: 50%;
-    transform: translate(-50%, 0);
+    translate: -50% 0;
   }
   .bg_clouds {
     top: 170px;
     left: 50%;
-    transform: translate(-50%, 0);
+    translate: -50% 0;
+  }
+  .bg_clouds.js-parallax {
+    top: 270px;
   }
   .layout {
     max-width: 1024px;
@@ -723,6 +845,10 @@ body {
   .second__pros-cards {
     grid-template: 1fr/1fr;
   }
+  .pros-card__image-box {
+    aspect-ratio: auto;
+    height: 240px;
+  }
   .plan-card:hover {
     transform: none;
   }
@@ -739,9 +865,6 @@ body {
     align-items: center;
     flex-wrap: nowrap;
     max-height: none;
-  }
-  .reviews__row {
-    width: 404px;
   }
   .sixth {
     flex-direction: column-reverse;
@@ -767,12 +890,28 @@ body {
   }
 }
 @media (max-width: 425px) {
+  .popup__window {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 80px 20px 40px;
+  }
+  .popup__image {
+    display: none;
+  }
+  .popup__image_success {
+    max-width: 238px;
+    height: auto;
+  }
+  .popup__image_fail {
+    max-width: 310px;
+    height: auto;
+  }
   .bg_mascot-header, .bg_mascot-header.js-parallax {
     width: 201px;
     height: 323px;
-    top: 450px;
+    top: 400px;
     left: 150px;
-    right: none;
+    right: unset;
     z-index: 1;
   }
   .bg_clouds-header {
@@ -797,24 +936,23 @@ body {
     width: 215px;
     height: 250px;
   }
-  .bg_planets {
+  .bg_mascot-footer.js-parallax {
+    top: 180px;
+  }
+  .bg_planets, .bg_planets.js-parallax {
     scale: 0.6;
-    top: 0;
-    left: 0;
+    top: -70px;
   }
-  .bg_clouds {
+  .bg_clouds, .bg_clouds.js-parallax {
     scale: 0.65;
-    top: 50px;
-    left: 40px;
+    top: -20px;
   }
-  .bg_stars-footer {
+  .bg_stars-footer, .bg_stars-footer.js-parallax {
     scale: 0.6;
     top: -160px;
-    left: 0;
   }
   .bg_stars-small-footer {
     scale: 0.7;
-    left: 40px;
     top: -140px;
   }
   .layout {
@@ -895,12 +1033,19 @@ body {
     grid-template-columns: 1fr;
     row-gap: 28px;
   }
+  .fourth::before {
+    top: -840px;
+  }
   .reviews__wrapper {
+    display: block;
+    gap: 0;
     flex-direction: row;
     flex-wrap: nowrap;
   }
   .reviews__image {
+    width: 100%;
     height: auto;
+    max-width: unset;
   }
   .swiper-pagination {
     display: block;
@@ -915,7 +1060,7 @@ body {
     margin-bottom: 67px;
   }
   .sixth__bg-wrapper {
-    height: 470px;
+    height: 420px;
   }
   .footer {
     padding-top: 40px;

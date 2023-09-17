@@ -20,10 +20,10 @@
             <a href="#" class="header__btn">Подключить VPN</a>
         </header>
         <section class="main">
-            <div class="js-parallax bg bg_stars-small-header animation-fadeIn" data-rellax-speed="1"></div>
-            <div class="js-parallax bg bg_stars-header animation-fadeIn" data-rellax-speed="2"></div>
-            <div class="js-parallax bg bg_clouds-header animation-fadeIn" data-rellax-speed="3"></div>
-            <div class="js-parallax bg bg_mascot-header" data-rellax-speed="4"></div>
+            <div class="bg bg_stars-small-header animation-fadeIn"></div>
+            <div class="js-parallax bg bg_stars-header animation-fadeIn" data-rellax-speed="1"></div>
+            <div class="js-parallax bg bg_clouds-header animation-fadeIn" data-rellax-speed="2" data-rellax-mobile-speed="1.2"></div>
+            <div class="js-parallax bg bg_mascot-header" data-rellax-speed="3" data-rellax-mobile-speed="1.4"></div>
             <div>
                 <div class="main__title">
                     <div class="color-green">VPN для вас.</div>
@@ -131,20 +131,20 @@
             </div>
         </section>
         <section class="section fourth">
-            <div class="js-parallax bg bg_stars-small-middle" data-rellax-speed="1" data-rellax-percentage="1"></div>  
-            <div class="js-parallax bg bg_stars-middle" data-rellax-speed="2" data-rellax-percentage="1"></div>  
-            <div class="js-parallax bg bg_clouds-middle" data-rellax-speed="3" data-rellax-percentage="1"></div>  
+            <div class="bg bg_stars-small-middle" data-rellax-speed="1" data-rellax-percentage="1"></div>  
+            <div class="js-parallax bg bg_stars-middle" data-rellax-speed="1" data-rellax-percentage="1"></div>  
+            <div class="js-parallax bg bg_clouds-middle" data-rellax-speed="2" data-rellax-percentage="1"></div>  
             <div class="section-title">Узнайте, что говорят наши клиенты</div>
             <div class="reviews swiper">
                 <div class="reviews__wrapper swiper-wrapper">
-                    <img src="images/review-1.jpg" class="reviews__image swiper-slide" width="404" height="146" loading="lazy">
-                    <img src="images/review-2.jpg" class="reviews__image swiper-slide" width="404" height="412" loading="lazy">
-                    <img src="images/review-3.jpg" class="reviews__image swiper-slide" width="404" height="146" loading="lazy">
-                    <img src="images/review-4.jpg" class="reviews__image swiper-slide" width="404" height="412" loading="lazy">
-                    <img src="images/review-5.jpg" class="reviews__image swiper-slide" width="404" height="412" loading="lazy">
-                    <img src="images/review-6.jpg" class="reviews__image swiper-slide" width="404" height="123" loading="lazy">
-                    <img src="images/review-7.jpg" class="reviews__image swiper-slide" width="404" height="146" loading="lazy">
-                    <img src="images/review-8.jpg" class="reviews__image swiper-slide" width="404" height="412" loading="lazy">
+                    <div class="swiper-slide"><img src="images/review-1.jpg" class="reviews__image" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/review-2.jpg" class="reviews__image" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/review-3.jpg" class="reviews__image" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/review-4.jpg" class="reviews__image" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/review-5.jpg" class="reviews__image" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/review-6.jpg" class="reviews__image" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/review-7.jpg" class="reviews__image" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/review-8.jpg" class="reviews__image" loading="lazy"></div>
                 </div>
             </div>
             <div class="swiper-pagination" style="--swiper-pagination-bullet-inactive-color: #fff; top: auto; bottom: -20px;"></div>
@@ -157,11 +157,11 @@
         </section>
         <section class="section sixth">
             <div class="sixth__bg-wrapper">
-                <div class="js-parallax bg bg_stars-small-footer" data-rellax-speed="1" data-rellax-percentage="1"></div>
-                <div class="js-parallax bg bg_stars-footer" data-rellax-speed="2" data-rellax-percentage="1"></div>
-                <div class="js-parallax bg bg_clouds" data-rellax-speed="3" data-rellax-percentage="1"></div>
-                <div class="js-parallax bg bg_planets" data-rellax-speed="4" data-rellax-percentage="1"></div>
-                <div class="js-parallax bg bg_mascot-footer" data-rellax-speed="5" data-rellax-percentage="1"></div>
+                <div class="bg bg_stars-small-footer" data-rellax-speed="1" data-rellax-percentage="1"></div>
+                <div class="js-parallax bg bg_stars-footer" data-rellax-speed="1.2" data-rellax-percentage="1"></div>
+                <div class="js-parallax bg bg_clouds" data-rellax-speed="1.4" data-rellax-percentage="1"></div>
+                <div class="js-parallax bg bg_planets" data-rellax-speed="1.6" data-rellax-percentage="1"></div>
+                <div class="js-parallax bg bg_mascot-footer" data-rellax-speed="2" data-rellax-percentage="1"></div>
             </div>
             <div class="sixth__wrapper">
                 <div class="section-title sixth__section-title">Разблокируйте весь мир с <span class="color-green">1vpn.pro</span></div>
@@ -200,6 +200,34 @@
             </div>
         </footer>
     </div>
+
+    <div class="popup popup_success" id="popup-success">
+        <div class="popup__window">
+            <button class="popup__close js-popup-close"><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="popup__close-icon"><path d="M4.36173 2.29288C3.97119 1.90237 3.338 1.90237 2.94746 2.29288L2.29291 2.94737C1.90237 3.33788 1.90236 3.97101 2.29291 4.36152L11.93 13.9978L2.29308 23.6338C1.90254 24.0243 1.90254 24.6575 2.29308 25.048L2.94763 25.7025C3.33817 26.093 3.97137 26.093 4.36191 25.7025L13.9988 16.0664L23.6357 25.7024C24.0263 26.0929 24.6594 26.0929 25.05 25.7024L25.7045 25.0479C26.0951 24.6574 26.0951 24.0243 25.7045 23.6338L16.0676 13.9978L25.7047 4.36155C26.0953 3.97104 26.0953 3.3379 25.7047 2.9474L25.0502 2.29291C24.6596 1.9024 24.0264 1.9024 23.6359 2.29291L13.9988 11.9291L4.36173 2.29288Z" /></svg></button>
+            <div class="popup__picture">
+                <img src="./images/popup__mascot-success.png" srcset="./images/popup__mascot-success@2x.png 1.5x" loading="lazy" class="popup__image popup__image_success">
+            </div>
+            <div class="popup__content">
+                <div class="popup__title">Благодарим за оплату!</div>
+                <div class="popup__text">После того, как мы все проверим - ожидайте письмо с файлами настроек на указанную при оплате почту.</div>
+                <div class="popup__text">Если вы указали неверный e-mail адрес при оплате - свяжитесь с нами!</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup_fail" id="popup-fail">
+        <div class="popup__window">
+            <button class="popup__close js-popup-close"><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="popup__close-icon"><path d="M4.36173 2.29288C3.97119 1.90237 3.338 1.90237 2.94746 2.29288L2.29291 2.94737C1.90237 3.33788 1.90236 3.97101 2.29291 4.36152L11.93 13.9978L2.29308 23.6338C1.90254 24.0243 1.90254 24.6575 2.29308 25.048L2.94763 25.7025C3.33817 26.093 3.97137 26.093 4.36191 25.7025L13.9988 16.0664L23.6357 25.7024C24.0263 26.0929 24.6594 26.0929 25.05 25.7024L25.7045 25.0479C26.0951 24.6574 26.0951 24.0243 25.7045 23.6338L16.0676 13.9978L25.7047 4.36155C26.0953 3.97104 26.0953 3.3379 25.7047 2.9474L25.0502 2.29291C24.6596 1.9024 24.0264 1.9024 23.6359 2.29291L13.9988 11.9291L4.36173 2.29288Z" /></svg></button>
+            <div class="popup__picture">
+                <img src="./images/popup__mascot-fail.png" srcset="./images/popup__mascot-fail@2x.png 1.5x" loading="lazy" class="popup__image popup__image_fail">
+            </div>
+            <div class="popup__content">
+                <div class="popup__title">Упс! С вашим платежом что-то не так!</div>
+                <div class="popup__text">Попробуйте еще раз или попробуйте другую карту! Или свяжитесь с нами.</div>
+            </div>
+        </div>
+    </div>
+
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" media="(max-width: 425px)" />
     <script src="./scripts/swiper-bundle.min.js"></script>
     <script src="./scripts/rellax.min.js"></script>
@@ -209,15 +237,33 @@
                 direction: 'horizontal',
                 slidesPerView: 1,
                 spaceBetween: 28,
+                // centeredSlides: true,
+                // setWrapperSize: true,
                 pagination: {
                     el: ".swiper-pagination",
                     dynamicBullets: true,
                 }
             });
         }
-        // var rellax = new Rellax('.js-parallax', {
-        //     center: true
-        // });
+
+        document.querySelectorAll('.popup__close').forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.target.closest('.popup').classList.remove('is-shown');
+                window.location.hash = "";
+            })
+        });
+
+        if (window.location.hash == '#popup-success') {
+            document.getElementById('popup-success').classList.add('is-shown');
+        }
+        if (window.location.hash == '#popup-fail') {
+            document.getElementById('popup-fail').classList.add('is-shown');
+        }
+
+        var rellax = new Rellax('.js-parallax', {
+            breakpoints: [425, 1024, 1920],
+            center: true
+        });
     </script>
 </body>
 </html>
