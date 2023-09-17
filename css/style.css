@@ -343,7 +343,7 @@ body {
 
 .main {
   position: relative;
-  padding-top: 173px;
+  padding-top: 123px;
   padding-bottom: 150px;
 }
 .main::before {
@@ -351,7 +351,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  top: 50px;
+  top: 0px;
   left: -300px;
   background: radial-gradient(50% 50% at 50% 50%, rgba(39, 48, 94, 0.53) 0%, rgba(23, 24, 28, 0) 100%);
   width: 1200px;
@@ -398,6 +398,7 @@ body {
   transition: background-color 0.1s;
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: var(--white);
 }
 .main__btn:hover {
   background-color: var(--green);

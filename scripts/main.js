@@ -12,7 +12,7 @@ if (window.innerWidth <= 425 && Swiper !== undefined) {
 
 document.querySelectorAll('.js-scroll-to-buy').forEach(el => {
     el.addEventListener('click', (e) => {
-        document.getElementById('buy').scrollIntoView({ behavior: 'smooth', block: 'center'});
+        document.getElementById('buy').scrollIntoView({ behavior: 'smooth', block: (window.innerWidth <= 425 ? 'start' : 'center') });
     })
 });
 
