@@ -17,7 +17,7 @@
                 <a href="#" class="contacts__btn"><span class="contacts__icon icon icon_mail"></span><span class="contacts__label">mail@1vpn.pro</span></a>
                 <a href="#" class="contacts__btn"><span class="contacts__icon icon icon_tg"></span><span class="contacts__label">@1vpn.pro</span></a>
             </div>
-            <a href="#" class="header__btn">Подключить VPN</a>
+            <button class="header__btn js-scroll-to-buy">Подключить VPN</button>
         </header>
         <section class="main">
             <div class="bg bg_stars-small-header animation-fadeIn"></div>
@@ -34,7 +34,7 @@
                     <li class="main__pros-item">Не блокирует приложения</li>
                     <li class="main__pros-item">Открывает все сайты</li>
                 </ul>
-                <a href="#" class="main__btn">Подключить VPN</a>
+                <button class="main__btn js-scroll-to-buy">Подключить VPN</button>
             </div>
         </section>
         <section class="section second">
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </section>
-        <section class="section third">
+        <section class="section third" id="buy">
             <div class="section-title">
                 Купите безопасный и быстрый доступ <nobr>в интернет</nobr> прямо сейчас
             </div>
@@ -96,7 +96,8 @@
                         <div class="plan-card__price">500 ₽</div>
                         <div class="plan-card__price-period">за месяц</div>
                     </div>
-                    <a href="#" class="plan-card__btn">Купить за 500 ₽</a>
+                    <div class="plan-card__btn">Купить за 500 ₽</div>
+                    <a href="#" class="plan-card__link"></a>
                 </div>
                 <div class="plan-card">
                     <div class="plan-card__wrapper">
@@ -105,7 +106,8 @@
                         <div class="plan-card__price">372 ₽</div>
                         <div class="plan-card__price-period">за месяц</div>
                     </div>
-                    <a href="#" class="plan-card__btn">Купить за 1 116 ₽</a>
+                    <div class="plan-card__btn">Купить за 1 116 ₽</div>
+                    <a href="#" class="plan-card__link"></a>
                 </div>
                 <div class="plan-card">
                     <div class="plan-card__wrapper">
@@ -114,7 +116,8 @@
                         <div class="plan-card__price">280 ₽</div>
                         <div class="plan-card__price-period">за месяц</div>
                     </div>
-                    <a href="#" class="plan-card__btn">Купить за 1 680 ₽</a>
+                    <div class="plan-card__btn">Купить за 1 680 ₽</div>
+                    <a href="#" class="plan-card__link"></a>
                 </div>
                 <div class="plan-card plan-card--highlighted">
                     <div class="plan-card__wrapper">
@@ -126,7 +129,8 @@
                         <div class="plan-card__price">192 ₽</div>
                         <div class="plan-card__price-period">за месяц</div>
                     </div>
-                    <a href="#" class="plan-card__btn">Купить за 2 304 ₽</a>
+                    <div class="plan-card__btn">Купить за 2 304 ₽</div>
+                    <a href="#" class="plan-card__link"></a>
                 </div>
             </div>
         </section>
@@ -175,7 +179,8 @@
                         <div class="plan-card__price">от 192 ₽</div>
                         <div class="plan-card__price-period">за месяц</div>
                     </div>
-                    <a href="#" class="plan-card__btn">Подключить VPN</a>
+                    <div class="plan-card__btn">Подключить VPN</div>
+                    <a href="#" class="plan-card__link"></a>
                 </div>
             </div>
         </section>
@@ -231,39 +236,7 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" media="(max-width: 425px)" />
     <script src="./scripts/swiper-bundle.min.js"></script>
     <script src="./scripts/rellax.min.js"></script>
-    <script>
-        if (window.innerWidth <= 425 && Swiper !== undefined) {
-            const swiper = new Swiper('.swiper', {
-                direction: 'horizontal',
-                slidesPerView: 1,
-                spaceBetween: 28,
-                // centeredSlides: true,
-                // setWrapperSize: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    dynamicBullets: true,
-                }
-            });
-        }
+    <script src="./scripts/main.js"></script>
 
-        document.querySelectorAll('.popup__close').forEach(el => {
-            el.addEventListener('click', (e) => {
-                e.target.closest('.popup').classList.remove('is-shown');
-                window.location.hash = "";
-            })
-        });
-
-        if (window.location.hash == '#popup-success') {
-            document.getElementById('popup-success').classList.add('is-shown');
-        }
-        if (window.location.hash == '#popup-fail') {
-            document.getElementById('popup-fail').classList.add('is-shown');
-        }
-
-        var rellax = new Rellax('.js-parallax', {
-            breakpoints: [425, 1024, 1920],
-            center: true
-        });
-    </script>
 </body>
 </html>

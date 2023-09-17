@@ -12,6 +12,11 @@ a
 img
     vertical-align: bottom
 
+button 
+    border: none
+    background-color: transparent
+    cursor: pointer
+
 html
     color-scheme: dark
     --bg: #17181C
@@ -207,7 +212,7 @@ body
         border-radius: 4px
         border: 1px solid var(--green-darker)
         font-size: rem(16px)
-        padding: 0 rem(24px)
+        padding: rem(12px) rem(24px)
         text-transform: uppercase
         letter-spacing: rem(0.8px)
         color: inherit
@@ -471,6 +476,13 @@ body
         text-transform: uppercase
         // display: block
         // border-radius: inherit
+    &__link
+        position: absolute
+        display: block
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
 
 .plan-card--highlighted
     .plan-card__wrapper
@@ -757,17 +769,25 @@ body
 
     .popup
         &__window
-            margin-left: 20px
-            margin-right: 20px
-            padding: 80px 20px 40px
-        &__image
-            display: none
+            margin-left: 10px
+            margin-right: 10px
+            padding: 50px 15px 15px
+            gap: 25px
+        &__close
+            top: 15px
+            right: 15px
         &__image_success
-            max-width: 238px
+            max-width: 200px
             height: auto
         &__image_fail
-            max-width: 310px
+            max-width: 210px
             height: auto
+        &__title
+            font-size: rem(28px)
+            margin-bottom: 24px
+        &__text
+            font-size: rem(16px)
+            margin-bottom: 16px
 
     .bg
         &_mascot-header,
@@ -837,8 +857,7 @@ body
             gap: 16px
         &__btn
             font-size: rem(12px)
-            padding-left: rem(16px)
-            padding-right: rem(16px)
+            padding: rem(8px) rem(16px)
 
     .logo
         font-size: rem(20px)
