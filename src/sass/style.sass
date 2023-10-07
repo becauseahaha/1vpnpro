@@ -617,6 +617,9 @@ body
         text-align: center
         line-height: 150%
         margin-bottom: 28px
+    &__iframe
+        aspect-ratio: 386 / 272
+        width: 386px
 
 .popup_success
     .popup__window
@@ -632,6 +635,12 @@ body
         color: var(--red-darker)
     .popup__image_success
         display: none
+.popup_payment
+    .popup__window
+        background-color: #fff
+        border-color: transparent
+    .popup__close-icon:hover
+        fill: black
 
 @media ( max-width: 1024px )
 

@@ -12,6 +12,7 @@ if (window.innerWidth <= 425 && Swiper !== undefined) {
 
 document.querySelectorAll('.js-scroll-to-buy').forEach(el => {
     el.addEventListener('click', (e) => {
+        e.preventDefault()
         document.getElementById('buy').scrollIntoView({ behavior: 'smooth', block: (window.innerWidth <= 425 ? 'start' : 'center') });
     })
 });
@@ -20,6 +21,14 @@ document.querySelectorAll('.popup__close').forEach(el => {
     el.addEventListener('click', (e) => {
         e.target.closest('.popup').classList.remove('is-shown');
         window.location.hash = "";
+    })
+});
+
+document.querySelectorAll('.js-link-popup').forEach(el => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('popup-payment').classList.add('is-shown');
+        document.getElementById('popup-payment').querySelector('iframe').src = el.href;
     })
 });
 
