@@ -41,6 +41,35 @@ body
 .hidden
     display: none
 
+.input
+    display: block
+    padding: 0 rem(18px)
+    line-height: rem(48px)
+    border-radius: 6px
+    transition: background-color 0.1s
+    letter-spacing: 1px
+    color: var(--bg)
+    font-size: 1rem
+    box-shadow: 0
+    border: none
+    margin-bottom: 10px
+    width: 100%
+    min-width: 250px
+    background-color: var(--white)
+.btn
+    display: block
+    width: 100%
+    padding: 0 rem(30px)
+    background-color: var(--green-darker)
+    line-height: rem(48px)
+    border-radius: 6px
+    transition: background-color 0.1s
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: var(--white)
+    font-size: 1rem
+    &:hover
+        background-color: var(--green)
 
 .layout
     position: relative
@@ -636,6 +665,11 @@ body
     .popup__image_success
         display: none
 .popup_payment
+    .popup__window
+        flex-direction: column
+        .g-recaptcha
+            margin-bottom: 10px
+.popup_payment-2
     .popup__window
         background-color: #fff
         border-color: transparent

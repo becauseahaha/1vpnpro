@@ -28,9 +28,24 @@ document.querySelectorAll('.js-link-popup').forEach(el => {
     el.addEventListener('click', (e) => {
         e.preventDefault();
         document.getElementById('popup-payment').classList.add('is-shown');
-        document.getElementById('popup-payment').querySelector('iframe').src = el.href;
+        return;
+        document.getElementById('popup-payment-2').querySelector('iframe').src = el.href;
     })
 });
+
+// document.getElementById('email-form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     let data = {};
+//     data['email'] = document.getElementById('email-form').querySelector('input[type=email]').value;
+//     fetch("mailer.php?" + new URLSearchParams(data).toString())
+//     .then(function(serverPromise) { 
+//         serverPromise.json()
+//         .then(function(data) { 
+//             document.getElementById('popup-payment').classList.remove('is-shown');
+//             document.getElementById('popup-payment-2').classList.add('is-shown');
+//         });
+//     });
+// })
 
 if (window.location.hash == '#popup-success') {
     document.getElementById('popup-success').classList.add('is-shown');
