@@ -6,8 +6,9 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style-3.css">
 </head>
 <body>
     <div class="layout">
@@ -20,75 +21,65 @@
             <button class="header__btn js-scroll-to-buy">Подключить VPN</button>
         </header>
         <section class="main">
-            <div class="bg bg_stars-small-header animation-fadeIn"></div>
-            <div class="js-parallax bg bg_stars-header animation-fadeIn" data-rellax-speed="1"></div>
-            <div class="js-parallax bg bg_clouds-header animation-fadeIn" data-rellax-speed="2" data-rellax-mobile-speed="1.2"></div>
-            <div class="js-parallax bg bg_mascot-header" data-rellax-speed="3" data-rellax-mobile-speed="1.4"></div>
-            <div>
-                <div class="main__title">
-                    <div class="color-green">VPN для вас.</div>
-                    Быстрый, безопасный, всегда доступный
-                </div>
-                <ul class="main__pros">
-                    <li class="main__pros-item">Без навязчивой рекламы</li>
-                    <li class="main__pros-item">Не блокирует приложения</li>
-                    <li class="main__pros-item">Открывает все сайты</li>
-                </ul>
-                <button class="main__btn js-scroll-to-buy">Подключить VPN</button>
+            <div class="main__image-container">
+                <div class="main__title font-gradient-white">Быстрый <span class="font-gradient-red">VPN</span></div>
+                <div class="main__title main__title-bottom font-gradient-white">без ограничений</div>
+            </div>
+            <button class="main__btn btn js-scroll-to-buy">Подключить сейчас</button>
+        </section>
+        <div class="benefits-title multiple-title section-title">
+            <div class="multiple-title__item font-gradient-white">Друзья, всем привет</div>
+            <div class="multiple-title__item font-gradient-white">настоятельно <span class="font-gradient-red">рекомендую</span></div>
+            <div class="multiple-title__item font-gradient-white"><span class="font-gradient-red">1vpn.pro</span>, ведь это:</div>
+        </div>
+        <section class="benefits">
+            <div class="benefits__item">
+                <div class="benefits__icon"><img src="./images/benefits-speed.svg"></div>
+                <div class="benefits__title">Скорость</div>
+                <div class="benefits__description">Другие сервисы не могут сравниться с нашей глобальной сетью VPN-серверов, обеспечивающих максимально быстрое подключение</div>
+            </div>
+            <div class="benefits__item">
+                <div class="benefits__icon"><img src="./images/benefits-safety.svg"></div>
+                <div class="benefits__title">Безопасность</div>
+                <div class="benefits__description">Наш VPN никогда не будет ограничивать пропускную способность вашего подключения, а так же обеспечит надежное шифрование данных</div>
+            </div>
+            <div class="benefits__item">
+                <div class="benefits__icon"><img src="./images/benefits-accecability.svg"></div>
+                <div class="benefits__title">Доступность</div>
+                <div class="benefits__description">Наша сеть позволяет подключиться к самому близкому серверу рядом с вами. А приложение доступно как на IOS, так и на ANDROID</div>
             </div>
         </section>
-        <section class="section second">
-            <div class="section-title">
-                Купите безопасный и быстрый доступ <nobr>в интернет</nobr> прямо сейчас
+        <section class="section sixth max-profit" id="buy">
+            <div class="sixth__section-title section-title">
+                <div class="max-profit__title-bg">Максимум</div>
+                <span class="font-gradient-red">Максимум</span> <span class="font-gradient-white">выгоды</span>
             </div>
-            <div class="second__pros-cards">
-                <div class="pros-card pros-card--speed">
-                    <div class="pros-card__title">Скорость</div>
-                    <div class="pros-card__description">Другие сервисы не могут сравниться с нашей глобальной сетью VPN-серверов, обеспечивающих максимально быстрое подключение и работающих на технологиях нового поколения</div>
-                    <div class="pros-card__image-box">
-                        <picture>
-                            <source srcset="images/pros-card-speed.webp 1x, images/pros-card-speed@2x.webp 1.5x" type="image/webp">
-                            <img src="images/pros-card-speed.jpg" srcset="images/pros-card-speed@2x.jpg 1.5x" width="100%" height="auto" loading="lazy" class="pros-card__image">
-                        </picture>
+            <div class="sixth__image-wrapper"></div>
+            <div class="sixth__wrapper">
+                <div class="plan-card plan-card_borderless sixth__plan-pc">
+                    <div class="plan-card__wrapper">
+                        <div class="plan-card__title font-gradient-red">Выгода 62%</div>
+                        <div class="plan-card__savings">«365 дней»</div>
+                        <div class="plan-card__price">192 ₽</div>
+                        <div class="plan-card__price-period">за месяц</div>
                     </div>
+                    <div class="plan-card__btn btn">Купить сейчас за 1 202 ₽</div>
+                    <a href="#" class="plan-card__link js-scroll-to-buy"></a>
                 </div>
-                <div class="pros-card pros-card--safety">
-                    <div class="pros-card__title">Безопасность</div>
-                    <div class="pros-card__description">Наш VPN никогда не будет ограничивать пропускную способность вашего подключения, а так же обеспечит надежное шифрование ваших данных</div>
-                    <div class="pros-card__image-box">
-                        <picture>
-                            <source srcset="images/pros-card-safety.webp 1x, images/pros-card-safety@2x.webp 1.5x" type="image/webp">
-                            <img src="images/pros-card-safety.jpg" loading="lazy" srcset="images/pros-card-safety@2x.jpg 1.5x" width="100%" height="auto" class="pros-card__image">
-                    </picture>
-                   </div>
-                </div>
-                <div class="pros-card pros-card--availability">
-                    <div class="pros-card__title">Доступность</div>
-                    <div class="pros-card__description">Используйте Интернет так, как вам хочется. Наша сеть позволяет подключиться к самому близкому серверу рядом с вами. А приложение доступно как на IOS, так и на ANDROID</div>
-                    <div class="pros-card__image-box">
-                        <picture>
-                            <source srcset="images/pros-card-availability.webp 1x, images/pros-card-availability@2x.webp 1.5x" type="image/webp">
-                            <img src="images/pros-card-availability.jpg" loading="lazy" srcset="images/pros-card-availability@2x.jpg 1.5x" width="100%" height="auto" class="pros-card__image">
-                        </picture>
-                    </div>  
-                </div>
-                <div class="pros-card pros-card--support">
-                    <div class="pros-card__title">Поддержка</div>
-                    <div class="pros-card__description">Служба поддержки круглосуточно на связи, чтобы ответить на все ваши интересующие вопросы</div>
-                    <div class="pros-card__image-box">
-                        <picture>
-                            <source srcset="images/pros-card-support.webp 1x, images/pros-card-support@2x.webp 1.5x" type="image/webp">
-                            <img src="images/pros-card-support.jpg" loading="lazy" srcset="images/pros-card-support@2x.jpg 1.5x" width="100%" height="auto" class="pros-card__image">
-                        </picture>
+                <div class="plan-card sixth__plan-mobile">
+                    <div class="plan-card__wrapper">
+                        <div class="plan-card__title font-gradient-white">60% <small>выгоды</small></div>
+                        <div class="plan-card__savings">«365 дней»</div>
+                        <div class="plan-card__price">192 ₽</div>
+                        <div class="plan-card__price-period">за месяц</div>
                     </div>
+                    <div class="plan-card__btn btn">Купить сейчас за 1 202 ₽</div>
+                    <a href="#" class="plan-card__link js-scroll-to-buy"></a>
                 </div>
             </div>
         </section>
-        <section class="section third" id="buy">
-            <div class="section-title">
-                Купите безопасный и быстрый доступ <nobr>в интернет</nobr> прямо сейчас
-            </div>
-            <div class="third__plans">
+        <section class="plans section">
+            <div class="plans__list">
                 <div class="plan-card">
                     <div class="plan-card__wrapper">
                         <div class="plan-card__title">«30 дней»</div>
@@ -97,7 +88,7 @@
                         <div class="plan-card__price-period">за месяц</div>
                     </div>
                     <div class="plan-card__btn">Купить за 500 ₽</div>
-                    <a href="https://pay.enot.io/widget/bbebd687-bff4-42d4-bb75-f121b8c0c105/form?color=white&amp;size=large&amp;email=1&amp;comment=VPN-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+1+%D0%BC%D0%B5%D1%81%D1%8F%D1%86&amp;amount=300&amp;currency=RUB" data-plan="first" data-price="100" class="plan-card__link js-link-popup"></a>
+                    <a href="https://pay.enot.io/widget/bbebd687-bff4-42d4-bb75-f121b8c0c105/form?color=white&amp;size=large&amp;email=1&amp;comment=VPN-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+1+%D0%BC%D0%B5%D1%81%D1%8F%D1%86&amp;amount=300&amp;currency=RUB" class="plan-card__link js-link-popup"></a>
                 </div>
                 <div class="plan-card">
                     <div class="plan-card__wrapper">
@@ -107,7 +98,7 @@
                         <div class="plan-card__price-period">за месяц</div>
                     </div>
                     <div class="plan-card__btn">Купить за 1 116 ₽</div>
-                    <a href="https://pay.enot.io/widget/bbebd687-bff4-42d4-bb75-f121b8c0c105/form?color=white&amp;size=large&amp;email=1&amp;comment=VPN-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+1+%D0%BC%D0%B5%D1%81%D1%8F%D1%86&amp;amount=300&amp;currency=RUB" data-plan="second" data-price="200" class="plan-card__link js-link-popup"></a>
+                    <a href="https://pay.enot.io/widget/bbebd687-bff4-42d4-bb75-f121b8c0c105/form?color=white&amp;size=large&amp;email=1&amp;comment=VPN-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+1+%D0%BC%D0%B5%D1%81%D1%8F%D1%86&amp;amount=300&amp;currency=RUB" class="plan-card__link js-link-popup"></a>
                 </div>
                 <div class="plan-card">
                     <div class="plan-card__wrapper">
@@ -117,28 +108,12 @@
                         <div class="plan-card__price-period">за месяц</div>
                     </div>
                     <div class="plan-card__btn">Купить за 1 680 ₽</div>
-                    <a href="https://pay.enot.io/widget/bbebd687-bff4-42d4-bb75-f121b8c0c105/form?color=white&amp;size=large&amp;email=1&amp;comment=VPN-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+1+%D0%BC%D0%B5%D1%81%D1%8F%D1%86&amp;amount=300&amp;currency=RUB" data-plan="third" data-price="300" class="plan-card__link js-link-popup"></a>
-                </div>
-                <div class="plan-card plan-card--highlighted">
-                    <div class="plan-card__wrapper">
-                        <div class="plan-card__hint">Максимальная выгода</div>
-                        <div class="plan-card__title">«365 дней»</div>
-                        <div class="plan-card__savings">
-                            <span class="plan-card__savings-star icon icon_star"></span>Выгода <span class="color-red">62%</span><span class="plan-card__savings-star icon icon_star"></span>
-                        </div>
-                        <div class="plan-card__price">192 ₽</div>
-                        <div class="plan-card__price-period">за месяц</div>
-                    </div>
-                    <div class="plan-card__btn">Купить за 2 304 ₽</div>
-                    <a href="https://pay.enot.io/widget/bbebd687-bff4-42d4-bb75-f121b8c0c105/form?color=white&amp;size=large&amp;email=1&amp;comment=VPN-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+1+%D0%BC%D0%B5%D1%81%D1%8F%D1%86&amp;amount=300&amp;currency=RUB" data-plan="fourth" data-price="400" class="plan-card__link js-link-popup"></a>
+                    <a href="https://pay.enot.io/widget/bbebd687-bff4-42d4-bb75-f121b8c0c105/form?color=white&amp;size=large&amp;email=1&amp;comment=VPN-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+1+%D0%BC%D0%B5%D1%81%D1%8F%D1%86&amp;amount=300&amp;currency=RUB" class="plan-card__link js-link-popup"></a>
                 </div>
             </div>
         </section>
         <section class="section fourth">
-            <div class="bg bg_stars-small-middle" data-rellax-speed="1" data-rellax-percentage="1"></div>  
-            <div class="js-parallax bg bg_stars-middle" data-rellax-speed="1" data-rellax-percentage="1"></div>  
-            <div class="js-parallax bg bg_clouds-middle" data-rellax-speed="2" data-rellax-percentage="1"></div>  
-            <div class="section-title">Узнайте, что говорят наши клиенты</div>
+            <div class="section-title font-gradient-white"><span class="font-gradient-red">Друзья</span> говорят</div>
             <div class="reviews swiper">
                 <div class="reviews__wrapper swiper-wrapper">
                     <div class="swiper-slide"><img src="images/review-1.jpg" class="reviews__image" loading="lazy"></div>
@@ -154,32 +129,28 @@
             <div class="swiper-pagination" style="--swiper-pagination-bullet-inactive-color: #fff; top: auto; bottom: -20px;"></div>
         </section>
         <section class="section fifth">
-            <div class="section-title">Посмотрите, как легко подключить <nobr>наш VPN</nobr></div>
+            <div class="multiple-title section-title">
+                <div class="multiple-title__item font-gradient-white">Посмотрите, как легко</div>
+                <div class="multiple-title__item font-gradient-red">подключить мой VPN</div>
+            </div>
             <div class="fifth__video-block">
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=hkatymy_JsTXd1Gv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
         </section>
         <section class="section sixth">
-            <div class="sixth__bg-wrapper">
-                <div class="bg bg_stars-small-footer" data-rellax-speed="1" data-rellax-percentage="1"></div>
-                <div class="js-parallax bg bg_stars-footer" data-rellax-speed="1.2" data-rellax-percentage="1"></div>
-                <div class="js-parallax bg bg_clouds" data-rellax-speed="1.4" data-rellax-percentage="1"></div>
-                <div class="js-parallax bg bg_planets" data-rellax-speed="1.6" data-rellax-percentage="1"></div>
-                <div class="js-parallax bg bg_mascot-footer" data-rellax-speed="2" data-rellax-percentage="1"></div>
+            <div class="sixth__section-title multiple-title section-title">
+                <div class="multiple-title__item font-gradient-white">Подключайся со мной,</div>
+                <div class="multiple-title__item font-gradient-red">Оставайся активным</div>
             </div>
+            <div class="sixth__image-wrapper"></div>
             <div class="sixth__wrapper">
-                <div class="section-title sixth__section-title">Разблокируйте весь мир с <span class="color-green">1vpn.pro</span></div>
-                <div class="plan-card plan-card--highlighted">
+                <div class="plan-card plan-card_borderless">
                     <div class="plan-card__wrapper">
-                        <div class="plan-card__hint">Быстрый, безопасный, всегда доступный</div>
-                        <div class="plan-card__title">1vpn.pro</div>
-                        <div class="plan-card__savings">
-                            <span class="plan-card__savings-star icon icon_star"></span>Выгода до <span class="color-red">62%</span><span class="plan-card__savings-star icon icon_star"></span>
-                        </div>
+                        <div class="plan-card__title font-gradient-white">1vpn.pro</div>
                         <div class="plan-card__price">от 192 ₽</div>
                         <div class="plan-card__price-period">за месяц</div>
                     </div>
-                    <div class="plan-card__btn">Подключить VPN</div>
+                    <div class="plan-card__btn btn">Подключить VPN</div>
                     <a href="#" class="plan-card__link js-scroll-to-buy"></a>
                 </div>
             </div>
@@ -219,19 +190,17 @@
             <div class="popup__title">Для оформления заказа<br> укажите ваш e-mail:</div>
             <form action="?" method="post" id="email-form">
                 <input type="email" name="email" placeholder="E-mail" required class="input">
-                <input type="hidden" name="plan">
-                <input type="hidden" name="price">
                 <div class="g-recaptcha" data-sitekey="6Lf9a5coAAAAACNR97ig25q2r-3GE1dHy1m8b4S5" data-action="LOGIN"></div>
                 <button type="submit" class="btn">К оплате</button>
             </form>
         </div>
     </div>
 
-    <div class="popup popup_success" id="popup-success2">
+    <div class="popup popup_success" id="popup-success">
         <div class="popup__window">
             <button class="popup__close js-popup-close"><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="popup__close-icon"><path d="M4.36173 2.29288C3.97119 1.90237 3.338 1.90237 2.94746 2.29288L2.29291 2.94737C1.90237 3.33788 1.90236 3.97101 2.29291 4.36152L11.93 13.9978L2.29308 23.6338C1.90254 24.0243 1.90254 24.6575 2.29308 25.048L2.94763 25.7025C3.33817 26.093 3.97137 26.093 4.36191 25.7025L13.9988 16.0664L23.6357 25.7024C24.0263 26.0929 24.6594 26.0929 25.05 25.7024L25.7045 25.0479C26.0951 24.6574 26.0951 24.0243 25.7045 23.6338L16.0676 13.9978L25.7047 4.36155C26.0953 3.97104 26.0953 3.3379 25.7047 2.9474L25.0502 2.29291C24.6596 1.9024 24.0264 1.9024 23.6359 2.29291L13.9988 11.9291L4.36173 2.29288Z" /></svg></button>
             <div class="popup__picture">
-                <img src="./images/popup__mascot-success.png" srcset="./images/popup__mascot-success@2x.png 1.5x" loading="lazy" class="popup__image popup__image_success">
+                <img src="./images/brear.png" loading="lazy" class="popup__image popup__image_success">
             </div>
             <div class="popup__content">
                 <div class="popup__title">Благодарим за оплату!</div>
@@ -244,9 +213,7 @@
     <div class="popup popup_fail" id="popup-fail">
         <div class="popup__window">
             <button class="popup__close js-popup-close"><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="popup__close-icon"><path d="M4.36173 2.29288C3.97119 1.90237 3.338 1.90237 2.94746 2.29288L2.29291 2.94737C1.90237 3.33788 1.90236 3.97101 2.29291 4.36152L11.93 13.9978L2.29308 23.6338C1.90254 24.0243 1.90254 24.6575 2.29308 25.048L2.94763 25.7025C3.33817 26.093 3.97137 26.093 4.36191 25.7025L13.9988 16.0664L23.6357 25.7024C24.0263 26.0929 24.6594 26.0929 25.05 25.7024L25.7045 25.0479C26.0951 24.6574 26.0951 24.0243 25.7045 23.6338L16.0676 13.9978L25.7047 4.36155C26.0953 3.97104 26.0953 3.3379 25.7047 2.9474L25.0502 2.29291C24.6596 1.9024 24.0264 1.9024 23.6359 2.29291L13.9988 11.9291L4.36173 2.29288Z" /></svg></button>
-            <div class="popup__picture">
-                <img src="./images/popup__mascot-fail.png" srcset="./images/popup__mascot-fail@2x.png 1.5x" loading="lazy" class="popup__image popup__image_fail">
-            </div>
+            <div class="popup__picture"></div>
             <div class="popup__content">
                 <div class="popup__title">Упс! С вашим платежом что-то не так!</div>
                 <div class="popup__text">Попробуйте еще раз или попробуйте другую карту! Или свяжитесь с нами.</div>
@@ -257,8 +224,7 @@
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf9a5coAAAAACNR97ig25q2r-3GE1dHy1m8b4S5"></script>
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" media="(max-width: 425px)" />
     <script src="./scripts/swiper-bundle.min.js"></script>
-    <script src="./scripts/rellax.min.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/main-2.js"></script>
 
 </body>
 </html>

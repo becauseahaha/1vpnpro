@@ -27,6 +27,8 @@ document.querySelectorAll('.popup__close').forEach(el => {
 document.querySelectorAll('.js-link-popup').forEach(el => {
     el.addEventListener('click', (e) => {
         e.preventDefault();
+        document.getElementById('popup-payment').querySelector('input[name=plan]').value =  el.dataset.plan;
+        document.getElementById('popup-payment').querySelector('input[name=price]').value = el.dataset.price;
         document.getElementById('popup-payment').classList.add('is-shown');
         return;
         document.getElementById('popup-payment-2').querySelector('iframe').src = el.href;
