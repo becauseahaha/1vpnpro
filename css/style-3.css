@@ -35,6 +35,7 @@ body {
   font-size: 1.25rem;
   color: var(--white);
   overflow-x: clip;
+  background: url(./../images/main-3.jpg) center 0 no-repeat;
   background-size: contain;
   background-color: var(--bg);
   position: relative;
@@ -157,6 +158,13 @@ body {
 }
 .btn:hover {
   background: var(--green-darker);
+}
+.btn:disabled {
+  cursor: default;
+  filter: grayscale(1);
+}
+.btn:disabled:hover {
+  background: var(--green-gradient);
 }
 
 .icon {
@@ -677,13 +685,23 @@ body {
 }
 
 .popup_success .popup__window {
+  height: 390px;
   border-color: var(--green-darker);
+  background-image: url(./../images/main-3-green.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative;
+  overflow: hidden;
 }
 .popup_success .popup__title {
   color: var(--green);
 }
 .popup_success .popup__image_fail {
   display: none;
+}
+.popup_success .popup__picture {
+  width: 330px;
 }
 
 .popup_fail .popup__window {
@@ -709,7 +727,8 @@ body {
 .popup_payment .popup__window {
   flex-direction: column;
 }
-.popup_payment .popup__window .g-recaptcha {
+.popup_payment .popup__window .g-recaptcha,
+.popup_payment .popup__window .smart-captcha {
   margin-bottom: 10px;
 }
 
@@ -723,8 +742,7 @@ body {
 
 @media (max-width: 1024px) {
   body {
-    background-position-y: 100px;
-    background-size: 95%;
+    background-size: 180%;
   }
   body::before {
     max-height: 950px;
@@ -775,6 +793,9 @@ body {
     width: 400px;
     height: 242px;
   }
+  .popup_success .popup__window {
+    background-image: none;
+  }
   .layout {
     max-width: 1024px;
     overflow: hidden;
@@ -801,8 +822,8 @@ body {
     margin-bottom: 100px;
   }
   .main {
-    padding-top: 470px;
-    padding-bottom: 300px;
+    padding-top: 360px;
+    padding-bottom: 200px;
   }
   .main__title {
     text-align: center;
@@ -955,12 +976,7 @@ body {
     background-size: 0.84375rem 0.84375rem;
   }
   body {
-    background-size: 115%;
-    background-position-y: 70px;
-  }
-  body::before {
-    max-height: 650px;
-    background-size: 400%;
+    background-size: 250%;
   }
   .main {
     padding-top: 0px;

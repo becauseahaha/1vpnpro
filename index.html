@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
 </head>
 <body>
     <div class="layout">
@@ -217,12 +218,12 @@
         <div class="popup__window">
             <button class="popup__close js-popup-close"><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="popup__close-icon"><path d="M4.36173 2.29288C3.97119 1.90237 3.338 1.90237 2.94746 2.29288L2.29291 2.94737C1.90237 3.33788 1.90236 3.97101 2.29291 4.36152L11.93 13.9978L2.29308 23.6338C1.90254 24.0243 1.90254 24.6575 2.29308 25.048L2.94763 25.7025C3.33817 26.093 3.97137 26.093 4.36191 25.7025L13.9988 16.0664L23.6357 25.7024C24.0263 26.0929 24.6594 26.0929 25.05 25.7024L25.7045 25.0479C26.0951 24.6574 26.0951 24.0243 25.7045 23.6338L16.0676 13.9978L25.7047 4.36155C26.0953 3.97104 26.0953 3.3379 25.7047 2.9474L25.0502 2.29291C24.6596 1.9024 24.0264 1.9024 23.6359 2.29291L13.9988 11.9291L4.36173 2.29288Z" /></svg></button>
             <div class="popup__title">Для оформления заказа<br> укажите ваш e-mail:</div>
-            <form action="?" method="post" id="email-form">
+            <form action="send.php" method="post" id="email-form">
                 <input type="email" name="email" placeholder="E-mail" required class="input">
                 <input type="hidden" name="plan">
                 <input type="hidden" name="price">
-                <div class="g-recaptcha" data-sitekey="6Lf9a5coAAAAACNR97ig25q2r-3GE1dHy1m8b4S5" data-action="LOGIN"></div>
-                <button type="submit" class="btn">К оплате</button>
+                <div style="height: 100px;" id="captcha-container" class="smart-captcha" data-sitekey="ysc1_spyaEBK3gdqufmQar1ABDjFdlbnXeEOY8W2wV8hS0b696580" data-callback="onCheck"></div>
+                <button type="submit" class="btn" id="submit-btn" disabled>К оплате</button>
             </form>
         </div>
     </div>

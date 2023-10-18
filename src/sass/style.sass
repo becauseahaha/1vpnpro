@@ -70,6 +70,12 @@ body
     font-size: 1rem
     &:hover
         background-color: var(--green)
+    &:disabled
+        cursor: default
+        filter: grayscale(1)
+        &:hover
+            background-color: var(--green-darker)
+            
 
 .layout
     position: relative
@@ -667,8 +673,10 @@ body
 .popup_payment
     .popup__window
         flex-direction: column
-        .g-recaptcha
+        .g-recaptcha,
+        .smart-captcha
             margin-bottom: 10px
+
 .popup_payment-2
     .popup__window
         background-color: #fff

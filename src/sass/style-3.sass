@@ -32,7 +32,7 @@ body
     font-size: rem(20px)
     color: var(--white)
     overflow-x: clip
-    // background: url(./../images/main-3.png) center -42px no-repeat 
+    background: url(./../images/main-3.jpg) center 0 no-repeat 
     background-size: contain
     background-color: var(--bg)
     position: relative
@@ -139,6 +139,11 @@ body
     text-align: center
     &:hover
         background: var(--green-darker)
+    &:disabled
+        cursor: default
+        filter: grayscale(1)
+        &:hover
+            background: var(--green-gradient)
 
 .icon
     display: block
@@ -588,11 +593,20 @@ body
 
 .popup_success
     .popup__window
+        height: 390px
         border-color: var(--green-darker)
+        background-image: url(./../images/main-3-green.jpg)
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: left center
+        position: relative
+        overflow: hidden
     .popup__title
         color: var(--green)
     .popup__image_fail
         display: none
+    .popup__picture
+        width: 330px
 .popup_fail
     .popup__window
         height: 390px
@@ -612,7 +626,8 @@ body
 .popup_payment
     .popup__window
         flex-direction: column
-        .g-recaptcha
+        .g-recaptcha,
+        .smart-captcha
             margin-bottom: 10px
 .popup_payment-2
     .popup__window
@@ -624,8 +639,7 @@ body
 @media ( max-width: 1024px )
 
     body
-        background-position-y: 100px
-        background-size: 95%
+        background-size: 180%
         &::before
             max-height: 950px
 
@@ -671,6 +685,10 @@ body
         &__image_fail
             width: 400px
             height: 242px
+    
+    .popup_success
+        .popup__window
+            background-image: none
 
     .layout
         max-width: 1024px
@@ -700,8 +718,8 @@ body
         margin-bottom: 100px
 
     .main
-        padding-top: 470px
-        padding-bottom: 300px
+        padding-top: 360px
+        padding-bottom: 200px
         &__title
             text-align: center
         &__title-bottom
@@ -838,11 +856,7 @@ body
             background-size: rem(13.5px) rem(13.5px)
 
     body
-        background-size: 115%
-        background-position-y: 70px
-        &::before
-            max-height: 650px
-            background-size: 400%
+        background-size: 250%
 
     .main
         padding-top: 0px

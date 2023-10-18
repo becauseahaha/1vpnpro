@@ -169,6 +169,13 @@ body::before {
 .btn:hover {
   background: var(--green-darker);
 }
+.btn:disabled {
+  cursor: default;
+  filter: grayscale(1);
+}
+.btn:disabled:hover {
+  background: var(--green-gradient);
+}
 
 .icon {
   display: block;
@@ -659,7 +666,8 @@ body::before {
 .popup_payment .popup__window {
   flex-direction: column;
 }
-.popup_payment .popup__window .g-recaptcha {
+.popup_payment .popup__window .g-recaptcha,
+.popup_payment .popup__window .smart-captcha {
   margin-bottom: 10px;
 }
 

@@ -82,6 +82,13 @@ body {
 .btn:hover {
   background-color: var(--green);
 }
+.btn:disabled {
+  cursor: default;
+  filter: grayscale(1);
+}
+.btn:disabled:hover {
+  background-color: var(--green-darker);
+}
 
 .layout {
   position: relative;
@@ -802,7 +809,8 @@ body {
 .popup_payment .popup__window {
   flex-direction: column;
 }
-.popup_payment .popup__window .g-recaptcha {
+.popup_payment .popup__window .g-recaptcha,
+.popup_payment .popup__window .smart-captcha {
   margin-bottom: 10px;
 }
 

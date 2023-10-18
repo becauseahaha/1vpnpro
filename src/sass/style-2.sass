@@ -149,6 +149,11 @@ body
     text-align: center
     &:hover
         background: var(--green-darker)
+    &:disabled
+        cursor: default
+        filter: grayscale(1)
+        &:hover
+            background: var(--green-gradient)
 
 .icon
     display: block
@@ -593,7 +598,8 @@ body
 .popup_payment
     .popup__window
         flex-direction: column
-        .g-recaptcha
+        .g-recaptcha,
+        .smart-captcha
             margin-bottom: 10px
 .popup_payment-2
     .popup__window
