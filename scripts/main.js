@@ -37,7 +37,9 @@ document.querySelectorAll('.js-link-popup').forEach(el => {
 
 let isCaptchaPassed = false;
 document.querySelector('input[name=email]').addEventListener('change', validateForm);
-document.querySelector('input[name=smart-token]').addEventListener('change', function() {
+function captchaCallback(token) {
+    let data = {};
+    data['token'] = token;
     fetch("captchaChecker.php?" + new URLSearchParams(data).toString())
     .then(function(serverPromise) { 
         serverPromise.json().then(function(data) { 
@@ -47,7 +49,7 @@ document.querySelector('input[name=smart-token]').addEventListener('change', fun
             }
         });
     });  
-})
+}
 function validateForm() {
     const btn = document.getElementById('submit-btn');
     if (document.querySelector('input[name=email]').checkValidity() && isCaptchaPassed) {
