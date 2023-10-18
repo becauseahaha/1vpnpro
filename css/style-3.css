@@ -532,6 +532,7 @@ body {
 }
 .max-profit .sixth__plan-mobile {
   display: none;
+  gap: 0;
 }
 .max-profit .sixth__section-title {
   margin-bottom: 200px;
@@ -570,9 +571,6 @@ body {
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
-}
-.max-profit .plan-card {
-  gap: 0;
 }
 
 .footer {
@@ -1098,6 +1096,9 @@ body {
   .sixth .plan-card__btn {
     font-size: 1.25rem;
   }
+  .sixth .sixth__plan-mobile {
+    gap: 0;
+  }
   .sixth .sixth__plan-mobile .plan-card__title small {
     font-size: 1.875rem;
     letter-spacing: 0.09375rem;
@@ -1153,6 +1154,9 @@ body {
     border-top-right-radius: 6px;
     line-height: 70px;
     font-weight: 400;
+  }
+  .max-profit .plan-card_borderless {
+    gap: 0;
   }
   .footer {
     padding-top: 40px;
